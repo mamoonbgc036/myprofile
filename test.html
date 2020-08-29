@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+  .ham,
+  .ham::after,
+  .ham::before{
+    content: '';
+    display: block;
+    background-color: red;
+    position: relative;
+    width: 50px;
+    height: 2px;
+  }
+
+  .ham::before{
+    bottom: 6px;
+  }
+
+  .ham{
+    padding-bottom: 2px;
+  }
+  .ham::after{
+    top: 6px;
+  }
+.b{
+  background-color: #111;
+}
+  </style>
+  <title>Document</title>
+</head>
+<body>
+  <button class="toggle" onclick="myfun()">
+    <span class="ham"></span>
+  </button>
+
+<script>
+function myfun(){
+  var x=document.getElementsByTagName('body')[0];
+  x.classList.toggle('b');
+}
+</script>
+</body>
+</html>
